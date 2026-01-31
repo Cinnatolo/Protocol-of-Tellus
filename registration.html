@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>報名規則︱Protocol of Tellus Project</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -15,7 +16,13 @@
         </a>
     </h1>
         <nav>
-            <ul>
+            <nav class="navbar">
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+            <ul class="nav-list">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="worldbuilding.html">世界觀</a></li>
                 <li><a href="NPC.html">NPC</a></li>
@@ -55,6 +62,21 @@
         <p>&copy; 2026 by Protocol of Tellus Project</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+    const menu = document.querySelector('#mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    // 點擊漢堡按鈕時觸發
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('is-active'); // 切換叉叉動畫
+        navList.classList.toggle('active'); // 切換選單滑入
+    });
+
+    // 選項：點擊選單連結後自動關閉選單 (適合單頁式網頁)
+    document.querySelectorAll('.nav-list li').forEach(n => n.addEventListener('click', () => {
+        menu.classList.remove('is-active');
+        navList.classList.remove('active');
+    }));
+</script>
 </body>
 </html>
