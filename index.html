@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocol of Tellus Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
     <header>
-        <h1 class="logo">
-        <a href="index.html">
-            <img src="image/logo-em-w.png" alt="Protocol of Tellus Logo">
-        </a>
-    </h1>
-        <nav class="navbar">
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <ul class="nav-list">
-        <li><a href="worldbuilding.html">世界觀</a></li>
-        <li><a href="NPC.html">NPC</a></li>
-        <li><a href="howtoplay.html">遊玩方法</a></li>
-        <li><a href="registration.html">報名規則</a></li>
-        <li><a href="faq.html">Q&A</a></li>
-        <li><a href="announcements.html">公告</a></li>
-        <li><a href="schedule.html">行事曆</a></li>
-        <li><a href="#">劇情網站入口</a></li>
-    </ul>
-</nav>
+        <div class="nav-container">
+            <h1 class="logo">
+                <a href="index.html">
+                <img src="image/logo-em-w.png" alt="Protocol of Tellus Logo">
+                </a>
+            </h1>
+            <nav class="navbar">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="worldbuilding.html">世界觀</a></li>
+                    <li><a href="NPC.html">NPC</a></li>
+                    <li><a href="howtoplay.html">遊玩方法</a></li>
+                    <li><a href="registration.html">報名規則</a></li>
+                    <li><a href="faq.html">Q&A</a></li>
+                    <li><a href="announcements.html">公告</a></li>
+                    <li><a href="schedule.html">行事曆</a></li>
+                    <li><a href="#">劇情網站入口</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -66,20 +72,20 @@
     </footer>
 
     <script>
-    const menu = document.querySelector('#mobile-menu');
-    const navList = document.querySelector('.nav-list');
+        const menu = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('.nav-list');
 
-    // 點擊漢堡按鈕時觸發
-    menu.addEventListener('click', () => {
+         // 點擊漢堡按鈕時觸發
+        menu.addEventListener('click', () => {
         menu.classList.toggle('is-active'); // 切換叉叉動畫
         navList.classList.toggle('active'); // 切換選單滑入
-    });
+        });
 
-    // 選項：點擊選單連結後自動關閉選單 (適合單頁式網頁)
-    document.querySelectorAll('.nav-list li').forEach(n => n.addEventListener('click', () => {
+        // 選項：點擊選單連結後自動關閉選單 (適合單頁式網頁)
+        document.querySelectorAll('.nav-list li').forEach(n => n.addEventListener('click', () => {
         menu.classList.remove('is-active');
         navList.classList.remove('active');
     }));
-</script>
+    </script>
 </body>
 </html>

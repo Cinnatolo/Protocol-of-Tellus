@@ -1,31 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     background-color: #000000; /* 純黑背景 */
     color: #ffffff;           /* 純白文字 */
     text-align: center; /* 讓全站文字水平置中 */
     margin: 0;
-    font-family: "Microsoft JhengHei", sans-serif;
+    font-family: "Chiron Sung HK", 'Noto Sans TC', sans-serif;
 }
 
 header {
-    display: flex;            /* 1. 開啟彈性佈局，讓子元素（標題和選單）並排 */
-    justify-content: space-between; /* 2. 讓標題在左、選單在右（推至兩端） */
-    align-items: center;      /* 3. 讓它們「垂直對齊」在同一個高度中心點 */
-    
-    padding: 20px 40px;       /* 增加一點內邊距，不要緊貼螢幕邊緣 */
-    background-color: #000;   /* 確保背景是黑色的 */
+    width: 100%;
+    background-color: #000000;
+}
+
+.nav-container {
+    max-width: 1600px;    
+    margin: 0 auto;       /*這行讓整個導覽列區塊置中 */
+    padding: 0 50px;      /* 這是你想要的「內縮」距離 */
+    display: flex;
+    justify-content: space-between; /* Logo 在左，選單在右 */
+    align-items: center;
+    height: 100px;         /* 設定一個固定高度比較整齊 */
 }
 
 .logo img {
     height: 120px;       /* 根據你的導覽列高度調整，通常 40px - 60px 比較合適 */
     width: auto;        /* 寬度自動縮放，避免圖片變形 */
+    padding-top: 5%;
     display: block;     /* 消除圖片下方多餘的微小間隙 */
 }
 
-/* 3. 移除 h1 可能自帶的間距 */
-.logo {
-    margin: 0;
-    padding: 0;
-}
 
 nav ul {
     list-style: none;          /* 移除小圓點 */
@@ -39,6 +51,7 @@ nav a {
     color: #ffffff;            /* 連結也要設定白色 */
     text-decoration: none;      /* 移除底線 */
     font-weight: bold;
+    font-size:16px;        /* 調整字體大小 */
     transition: 0.3s;          /* 增加滑動動畫感 */
 }
 
@@ -59,7 +72,7 @@ nav a:hover {
 /* 3. 按鈕的基本造型 */
 .btn {
     display: block;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border: 1px solid #ffffff; /* 白色邊框 */
     color: #ffffff;            /* 白色文字 */
     text-decoration: none;
@@ -108,15 +121,16 @@ section {
 .nav-list {
     display: flex;
     list-style: none;
+    white-space: nowrap;
 }
 
 .nav-list li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .nav-list a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
 }
 
 /* --- 2. 手機版 RWD 設定 (768px 以下) --- */
@@ -174,4 +188,9 @@ section {
         margin: 5px;
         transition: 0.3s;
     }
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
 }
